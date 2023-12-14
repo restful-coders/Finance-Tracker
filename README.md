@@ -6,19 +6,19 @@ Our Finance Tracking website provides a personalized approach to managing expens
 
 # Key Features:
 ## 1. User Registration and Authentication:
-## - Users can register and log in securely to access their financial data.
+### - Users can register and log in securely to access their financial data.
 ## 2. Income and Expense Tracking:
-## - Users can input their annual or monthly income and record various expenses.
-## - Expenses can be categorized (e.g., groceries, utilities, entertainment) for better organization.
+### - Users can input their annual or monthly income and record various expenses.
+### - Expenses can be categorized (e.g., groceries, utilities, entertainment) for better organization.
 ## 3. Dashboard:
-## - A dynamic dashboard provides an overview of income, expenses, and the current financial status.
-## - Graphs and charts visualize spending patterns and income trends.
+### - A dynamic dashboard provides an overview of income, expenses, and the current financial status.
+### - Graphs and charts visualize spending patterns and income trends.
 ## 4. Expense Table:
-## - A detailed table displays individual transactions, including date, category, and amount.
+### - A detailed table displays individual transactions, including date, category, and amount.
 ## 5. Reminder Feature:
-## - Users can set reminders for upcoming bills, fees, or other financial commitments.
-## - Email or in-app notifications are sent as reminders approach.
-### The Financial Tracker website aims to empower users with a comprehensive tool for managing their finances efficiently. Whether tracking income, monitoring expenses, or  setting budgets, the website provides a user-friendly experience to promote financial well-being.
+### - Users can set reminders for upcoming bills, fees, or other financial commitments.
+### - Email or in-app notifications are sent as reminders approach.
+#### The Financial Tracker website aims to empower users with a comprehensive tool for managing their finances efficiently. Whether tracking income, monitoring expenses, or  setting budgets, the website provides a user-friendly experience to promote financial well-being.
 
 # Baiscs Pre-requisites of System:
 ### 1) Node.js : https://nodejs.org/en/download
