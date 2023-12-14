@@ -5,7 +5,7 @@ Our Finance Tracking website provides a personalized approach to managing expens
 # We established the database connnectivity by using the Node.js
 
 # Team Members
-Vaibhav Vasant Patil ( Captain )
-Sejal Subhash Pawar
-Yash Vijay Panwal
+Vaibhav Vasant Patil ( Captain ), 
+Sejal Subhash Pawar, 
+Yash Vijay Panwal, 
 Dattaram Santosh Kolte
