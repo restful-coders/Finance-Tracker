@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous"></script>
+
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script> <!-- Add Chart.js library -->
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+        .gride {
+            display: grid;
+            grid-template-columns: auto auto auto;
+        }
+
+        form {
+            background-color: #fff;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            width: 800px;
+            margin-left: 25%;
+            max-width: 100%;
+        }
+
+        h1 {
+            text-align: center;
+            color: #333;
+        }
+
+        label {
+            display: block;
+            margin: 10px 0 5px;
+            color: #555;
+        }
+
+        input,
+        select,
+        textarea {
+            width: 100%;
+            padding: 8px;
+            margin-bottom: 15px;
+            box-sizing: border-box;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+        }
+
+        button {
+            background-color: #007bff;
+            color: #fff;
+            padding: 10px;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+            width: 100%;
+        }
+
+        button:hover {
+            background-color: #0056b3;
+        }
+        @media screen and (max-width: 756px) {
+            form {
+              
+              width: 400px;
+              max-width: 50%;
+          }
+        }
+          @media screen and (max-width: 1100px) {
+            form {
+              
+              width: 600px;
+              max-width: 50%;
+          }
+          }
+    </style>
+    <title>Finance Tracker</title>
+</head>
+<body>
+    <nav class="py-2 bg-body-tertiary border-bottom">
+        <div class="container d-flex flex-wrap">
+          <ul class="nav me-auto "style="justify-content:space-evenly;">
+            <li class="nav-item"><a href="./home.html   " class="nav-link link-body-emphasis px-2 active" aria-current="page">Home</a></li>
+            <li class="nav-item"><a href="#" class="nav-link link-body-emphasis px-2">Features</a></li>
+            <li class="nav-item"><a href="#" class="nav-link link-body-emphasis px-2">Pricing</a></li>
+            <li class="nav-item"><a href="#" class="nav-link link-body-emphasis px-2">FAQs</a></li>
+            <li class="nav-item"><a href="#" class="nav-link link-body-emphasis px-2">About</a></li>
+          </ul>
+         </div>
+      </nav>
+          <header class="py-3 mb-4 border-bottom">
+            <div class="container d-flex flex-wrap justify-content-center">
+              <a href="/" class="d-flex align-items-center mb-3 mb-lg-0 me-lg-auto link-body-emphasis text-decoration-none"style="margin-left:-100px">
+                <img src="./logo.png" height="30px">
+                <span class="fs-4">Finance Tracker</span>
+              </a>
+              <ul class="nav me-auto">
+                <li class="nav-item"><a href="./user_home.php" class="nav-link link-body-emphasis px-2">Dashboard</a></li>
+                <li class="nav-item"><a href="./income.html"class="nav-link link-body-emphasis px-2">Income</a></li>
+                <li class="nav-item"><a href="./expenses.html" class="nav-link link-body-emphasis px-2">Expenses</a></li>
+                <li class="nav-item"><a href="./remainder.html"class="nav-link link-body-emphasis px-2" >Remainders</a></li>
+                
+                <li class="nav-item"><a href="./budget.html" class="nav-link active" aria-current="page">Budget/Savings</a></li>
+              </ul>
+              </div>
+          </header>
+        <form id="budgetForm">
+            <h1>Budget and Savings</h1>
+
+            <label for="monthlyBudget">Monthly Budget:</label>
+            <input type="number" id="monthlyBudget" name="monthlyBudget" required>
+
+            <label for="savingsAmount">Amount to Save:</label>
+            <input type="number" id="savingsAmount" name="savingsAmount" required>
+
+            <label for="budgetCategory">Budget Category:</label>
+            <select id="budgetCategory" name="budgetCategory" style="height: 50px;">
+                <option value="general">General</option>
+                <option value="entertainment">Entertainment</option>
+                <option value="groceries">Groceries</option>
+                <option value="utilities">Utilities</option>
+                <!-- Add more categories as needed -->
+            </select>
+
+            <label for="budgetNotes">Not    es:</label>
+            <textarea id="budgetNotes" name="budgetNotes" rows="2"></textarea>
+
+            <label for="paymentDate">Payment Date:</label>
+            <input type="date" id="paymentDate" name="paymentDate">
+
+            <button type="button" onclick="submitBudgetForm()">Save Budget</button>
+
+            <div class="savings-info">
+                <p>Tip: Set a realistic budget and regularly review your expenses to achieve your savings goals!</p>
+            </div>
+        </form>
+    </div>
+
+    <script>
+        function submitBudgetForm() {
+            const monthlyBudget = document.getElementById('monthlyBudget').value;
+            const savingsAmount = document.getElementById('savingsAmount').value;
+            const budgetCategory = document.getElementById('budgetCategory').value;
+            const budgetNotes = document.getElementById('budgetNotes').value;
+            const paymentDate = document.getElementById('paymentDate').value;
+
+            // Prepare data to send to the server
+            const data = {
+                monthlyBudget: monthlyBudget,
+                savingsAmount: savingsAmount,
+                budgetCategory: budgetCategory,
+                budgetNotes: budgetNotes,
+                paymentDate: paymentDate
+            };
+
+            // Make a POST request to the server
+            fetch('/addBudget', {
+                method: 'POST',
+                headers: {
+                    'Content-Type': 'application/json',
+                },
+                body: JSON.stringify(data),
+            })
+                .then(response => response.text())
+                .then(message => {
+                    alert(message); // Show the response message in an alert
+                    // Optionally, you can redirect to another page or perform other actions
+                })
+                .catch(error => console.error('Error:', error));
+        }
+    </script>
+    </body>
+    </html>

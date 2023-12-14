@@ -1,0 +1,245 @@
+ <!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous"></script>
+
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script> <!-- Add Chart.js library -->
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+        .HomePage{
+            display: grid;
+            grid-template-columns: 900px 600px ;    
+            grid-template-rows: 300px 400px ;
+             }
+             .profile {
+              grid-row-start: 1;
+              grid-column-start: 1;
+              grid-column-end: 3;
+              
+          }
+          .h1{
+            font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif ;
+            font-size: 35px;
+          }
+          
+             main{
+              grid-row-start: 1;
+              grid-column-start: 2;
+              grid-column-end: 3;
+              margin-right: 70px;
+              width: 500px;
+             }
+             
+             
+    </style>
+    <title>Finance Tracker</title>
+</head>
+<body>
+  <nav class="py-2 bg-body-tertiary border-bottom">
+    <div class="container d-flex flex-wrap">
+      <ul class="nav me-auto "style="justify-content:space-evenly;">
+        <li class="nav-item"><a href="#" class="nav-link link-body-emphasis px-2 active" aria-current="page">Home</a></li>
+        <li class="nav-item"><a href="#" class="nav-link link-body-emphasis px-2">Features</a></li>
+        <li class="nav-item"><a href="#" class="nav-link link-body-emphasis px-2">Pricing</a></li>
+        <li class="nav-item"><a href="#" class="nav-link link-body-emphasis px-2">FAQs</a></li>
+        <li class="nav-item"><a href="#" class="nav-link link-body-emphasis px-2">About</a></li>
+      </ul>
+     </div>
+  </nav>
+      <header class="py-3 mb-4 border-bottom">
+        <div class="container d-flex flex-wrap justify-content-center">
+          <a href="/" class="d-flex align-items-center mb-3 mb-lg-0 me-lg-auto link-body-emphasis text-decoration-none"style="margin-left:-100px">
+            <img src="./logo.png" height="30px">
+            <span class="fs-4">Finance Tracker</span>
+          </a>
+          <ul class="nav me-auto">
+            <li class="nav-item"><a href="./user_home.html" class="nav-link active" aria-current="page">Dashboard</a></li>
+            <li class="nav-item"><a href="./income.html" class="nav-link link-body-emphasis px-2">Income</a></li>
+            <li class="nav-item"><a href="./expenses.html" class="nav-link link-body-emphasis px-2">Expenses</a></li>
+            <li class="nav-item"><a href="./remainder.html" class="nav-link link-body-emphasis px-2">Remainders</a></li>
+            
+            <li class="nav-item"><a href="./budget.html" class="nav-link link-body-emphasis px-2">Budget/Savings</a></li>
+          </ul>
+          </div>
+      </header>
+      
+    <div class="HomePage">
+      <div class="main">
+      <!-- Customer Profile Block -->
+      <div class="container mt-4">
+          <div class="row">
+              <div class="col-md-10 mb-4">
+                  <div class="bg-secondary p-3 text-white rounded">
+                      <h2 class="display-4 fw-bold">Vaibhav Patil
+                        
+                      </h2>
+                      <!-- Line below the Customer Profile -->
+                      <hr class="my-4 cust_line border-light">
+                      <div class="d-flex align-items-center">
+                          <img src="customer_image.png" alt="Customer Image" class="rounded-circle me-4" style="width: 120px; height: 120px;">
+                          <div>
+                              <p class="lead">Email Id : VaibhavvPatill@gmail.com</p>
+                              <!-- Add more customer details here -->
+                          </div>
+                      </div>
+                  </div>
+              </div>
+          </div>
+      </div>
+
+     
+
+
+      <!-- Existing Blocks -->
+      <div class="container mt-4">
+          <div class="row">
+              <!-- Block 1: Income Summary -->
+              <div class="col-md-5 mb-3">
+                  <div class="bg-primary p-2 text-white rounded">
+                      <h2 class="h1">Income Summary</h2>
+                      <p class="lead">Total Income: ₹15000</p>
+                      <!-- Add more income-related information here -->
+                  </div>
+              </div>
+
+              <!-- Block 2: Expenses Summary -->
+              <div class="col-md-5 mb-3">
+                  <div class="bg-danger p-2 text-white rounded">
+                      <h2 class="h1">Expense Summary</h2>
+                      <p class="lead">Total Expenses: ₹10000</p>
+                      <!-- Add more expenses-related information here -->
+                  </div>
+              </div>
+
+              <!-- Block 3: Savings -->
+              <div class="col-md-5 mb-3">
+                  <div class="bg-success p-2 text-white rounded">
+                      <h2 class="h1">Savings</h2>
+                      <p class="lead">Total Savings: ₹1000</p>
+                      <!-- Add more additional information here -->
+                  </div>
+              </div>
+
+              <!-- Block 4: Reminder -->
+              <div class="col-md-5 mb-3">
+                  <div class="bg-warning p-2 rounded">
+                      <h2 class="h1">Reminder</h2>
+                      <p class="lead">Upcoming events, tasks, etc.</p>
+                      <!-- Add more reminder-related information here -->
+                  </div>
+              </div>
+          </div>
+      </div>
+    </div>
+    <div class="main1">
+        <div class="d-flex justify-content-between flex-wrap flex-md-nowrap align-items-center pt-3 pb-2 mb-3 border-bottom graph " style="width:700px; margin-left:-100px;margin-top:-30px;">
+          <h1 class="h2" >Insights</h1>
+          <div class="btn-toolbar mb-2 mb-md-0">
+              <div class="btn-group me-2">
+                  <button type="button" class="btn btn-sm btn-outline-secondary">Share</button>
+                  <button type="button" class="btn btn-sm btn-outline-secondary">Export</button>
+              </div>
+              <button type="button" class="btn btn-sm btn-outline-secondary dropdown-toggle d-flex align-items-center gap-1">
+                  This week
+              </button>
+          </div>
+      </div>
+
+      <canvas id="myChart" width="300" height="150"style="margin-left:-100px"></canvas> <!-- Canvas for Chart.js graph -->
+      <canvas id="myCharte" width="300" height="150"style="margin-left:-100px"></canvas> <!-- Canvas for Chart.js graph -->
+  
+    </div>
+  </div>
+  
+</div>
+
+    <script src="practise.js"></script>
+      <script>
+        document.addEventListener("DOMContentLoaded", function () {
+            // Sample data for the chart
+            const labels = ['Grocery', 'Entertainment', 'Utlities', 'Medicals', 'irrelevant'];
+            const dataset1Data = [1001, 707, 803, 1104, 1005];
+            const dataset2Data = [500, 800, 900, 700, 600];
+
+            // Create a bar chart
+            const ctx = document.getElementById('myChart').getContext('2d');
+            const myChart = new Chart(ctx, {
+                type: 'bar',
+                data: {
+                    labels: labels,
+                    datasets: [
+                        {
+                            label: 'Expenses ',
+                            data: dataset1Data,
+                            backgroundColor: 'rgba(255, 99, 132, 0.2)',
+                            borderColor: 'rgba(255, 99, 132, 1)',
+                            borderWidth: 1,
+                        },
+                        {
+                            label: 'Savings',
+                            data: dataset2Data,
+                            backgroundColor: 'rgba(75, 192, 192, 0.2)',
+                            borderColor: 'rgba(75, 192, 192, 1)',
+                            borderWidth: 1,
+                        },
+                    ],
+                },
+                options: {
+                    scales: {
+                        x: {
+                            stacked: true,
+                        },
+                        y: {
+                            stacked: true,
+                        },
+                    },
+                },
+            });
+        });
+          // Sample data for the chart
+          const labels = ['Grocery', 'Entertainment', 'Utlities', 'Medicals', 'irrelevant'];
+          const dataset1Data = [1001, 707, 803, 1104, 1005];
+          const dataset2Data = [500, 800, 900, 700, 600];
+        const ctx = document.getElementById('myCharte').getContext('2d');
+        const myCharte = new Chart(ctx, {
+            type: 'line',
+            data: {
+                labels: labels,
+                datasets: [
+                    {
+                        label: 'Savings',
+                        data: dataset1Data,
+                        backgroundColor: 'rgba(75, 192, 192, 0.2)',
+                        borderColor: 'rgba(75, 192, 192, 1)',
+                        borderWidth: 1,
+                    },
+                    {
+                        label: 'Expenses',
+                        data: dataset2Data,
+                        backgroundColor: 'rgba(255, 99, 132, 0.2)',
+                        borderColor: 'rgba(255, 99, 132, 1)',
+                        borderWidth: 1,
+                    },
+                ],
+            },
+            options: {
+                scales: {
+                    x: {
+                        stacked: true,
+                    },
+                    y: {
+                        stacked: true,
+                    },
+                },
+            },
+        });
+    
+    </script>
+ 
+</body>
+</html>
+    <?php
